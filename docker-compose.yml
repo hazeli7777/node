@@ -11,6 +11,7 @@ services:
       - "9222:9222/udp" # P2P UDP
       - "7300:7300" # metrics
       - "6060:6060" # pprof
+      - "8551:8551"
     command: ["bash", "./op-node-entrypoint"]
     env_file:
       - ${NETWORK_ENV:-.env.mainnet} # Use .env.mainnet by default, override with .env.sepolia for testnet
